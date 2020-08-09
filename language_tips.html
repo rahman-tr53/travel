@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/hd.css">
+    <link rel="stylesheet" href="css/in.css">
+    <link rel="stylesheet" href="css/fot.css">
+    <link rel="stylesheet" href="css/language.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+        <div class="menu" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+               <h1 class="brand"><a href="index.html">Travel<span>-to-</span>invigorate</a></h1>
+            </nav>
+        </div>
+
+</header>
+
+
+<div class="lang_body">
+    <img src="img/images.png" alt="">
+    <h2>Basic Bangla Language for Tourist</h2>
+</div>
+
+<div class="lang_content clearfix">
+    <div class="lang_content_left">
+        <h2>Bengali Language</h2>
+        <p>Lesson 1: Introduction</p>
+        <p>Lesson 2: Food (I)</p>
+        <p>Lesson 3: Numbers (1-10)</p>
+        <p>Lesson 4: Colors</p>
+        <p>Lesson 5: Family</p>
+        <p>Lesson 6: Numbers (>10)</p>
+        <p>Lesson 7: Food (II)</p>
+        <p>Lesson 8: Animals</p>
+        <p>Lesson 9: Clothes</p>
+        <p>Lesson 10: Months</p>
+        <h2>Average Rating: <span class="text_color_for_rating">4.7</span> /5 (<span class="text_color_for_rating">250 votes</span>)</h2>
+
+    </div>
+
+    <div class="lang_content_right">
+        <div>
+            <ul class="breadcrumb">
+                <li><a href="#">Free Lessons </a></li>
+                <li><a href="#">Learn Bangla</a></li>
+                <li><a href="#">Introduction</a></li>
+
+            </ul>
+            <h3 style="font-weight:normal;">হ্যালো</h3>
+            <h3>Hello</h3>
+
+            <hr>
+
+            <h3 style="font-weight:normal;">তুমি কেমন আছো। </h3>
+            <h3>How are you?</h3>
+
+            <hr>
+
+            <h3 style="font-weight:normal;">আমি ভালো আছি, ধন্যবাদ। </h3>
+            <h3>I'm fine, thank you.</h3>
+
+            <hr>
+
+            <h3 style="font-weight:normal;">আমার নাম করিম। </h3>
+            <h3>My name is Karim.</h3>
+
+            <hr>
+
+            <h3 style="font-weight:normal;">বিদায় </h3>
+            <h3>Goodbye</h3>
+
+            <hr>
+
+            <h3 style="font-weight:normal;">তুমার সাথে দেখা হয়ে খুব ভালো লাগলো। </h3>
+            <h3>Nice to meet you.</h3>
+
+            <hr>
+
+            <h3 style="font-weight:normal;">তুমি কি ইংরেজিতে কথা বলতে পার।   </h3>
+            <h3>Do you speak English?</h3>
+
+            <hr>
+
+            <h3 style="color:green;">Next Lesson:  Coming Soon..</h3>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<div style="padding:50px; width:87%;margin:0 auto;">
+
+    <!--        Header-->
+    <div>
+        <h1 style="color:green;text-align:center;">Language Quiz</h1>
+    </div>
+
+
+
+    <!--        Form-->
+    <div style="border:2px solid #FF9800;padding:30px; font-size:16px;">
+        <form onsubmit="return false">
+            <span id="ShowCorrectAns"></span>
+            <div>
+                <p style="font-weight:bold;">How are you?</p>
+                <input id="checkedRight" type="radio" name="radioButton" value="0">তুমি কেমন আছো?<br>
+                <input type="radio" name="radioButton" value="1">আমি কেমন আছি? <br>
+                <input type="radio" name="radioButton" value="2">তারা কেমন আছে?  <br>
+            </div>
+
+            <br>
+
+            <span id="ShowCorrectAns1"></span>
+            <div>
+                <p style="font-weight:bold;">My name is Karim?</p>
+                <input  type="radio" name="radioButton1" value="0">তার নাম করিম। <br>
+                <input type="radio" name="radioButton1" value="1">আমার নাম কারিম।  <br>
+                <input id="checkedRight1" type="radio" name="radioButton1" value="2">আমার বন্ধুর নাম করিম। <br>
+            </div>
+
+            <br>
+
+            <span id="ShowCorrectAns2"></span>
+            <div>
+                <p style="font-weight:bold;">Do you speak English?</p>
+                <input id="checkedRight2" type="radio" name="radioButton2" value="0">তুমি কি ইংরেজিতে কথা বলতে পার।
+                <br>
+                <input type="radio" name="radioButton2" value="1">তুমি কি আরবিতে কথা বলতে পার।
+                <br>
+                <input type="radio" name="radioButton2" value="2">তুমি কি বাংলায় কথা বলতে পার।
+                <br>
+            </div>
+
+
+            <br>
+            <!--            Button-->
+            <div>
+                <input style="border:none; padding:5px 10px;background: #3C3F41; color:#19A15F" type="Submit" onclick="CallFunction()">
+                <input style="border:none; padding:5px 10px;background: #3C3F41; color:#FFCD42" type="reset"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function CallFunction(){
+
+    var x = document.getElementById("checkedRight");
+
+    if(x.checked == true){
+        document.getElementById("ShowCorrectAns").innerHTML = "True";
+        document.getElementById("ShowCorrectAns").style.color = '#1AA160';
+    }else{
+        document.getElementById("ShowCorrectAns").innerHTML = "False";
+        document.getElementById("ShowCorrectAns").style.color = '#F6182A';
+    }
+
+    var x1 = document.getElementById("checkedRight1");
+
+    if(x1.checked == true){
+        document.getElementById("ShowCorrectAns1").innerHTML = "True";
+        document.getElementById("ShowCorrectAns1").style.color = '#1AA160';
+    }else{
+        document.getElementById("ShowCorrectAns1").innerHTML = "False";
+        document.getElementById("ShowCorrectAns1").style.color = '#F6182A';
+    }
+
+    var x2 = document.getElementById("checkedRight2");
+
+    if(x2.checked == true){
+        document.getElementById("ShowCorrectAns2").innerHTML = "True";
+        document.getElementById("ShowCorrectAns2").style.color = '#1AA160';
+    }else{
+        document.getElementById("ShowCorrectAns2").innerHTML = "False";
+        document.getElementById("ShowCorrectAns2").style.color = '#F6182A';
+    }
+
+}
+</script>
+
+
+
+</body>
+</html>
