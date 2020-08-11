@@ -56,5 +56,88 @@
   <img src="images/sweet.jpg" alt="" height="300px" width="300">
 </div>
 </div><br><br>
+    
+    <input id="hello" type = "button" onclick = "sayHello()" value = "Click Me!" />
+<!-- footer -->
+<div class="footer">
+  <div class="footer-content container">
+
+    <div class="footer-section about about_section">
+      <H1>About Us</H1>
+      <p>Bangladesh offers a rich variety of delicacies for every palate. The sweet tooth of Bengalis, as well as the variety of sweets and desserts available in the region, is astounding.</p>
+      <a href="#">Read More</a>
+    </div>
+
+    <div class="footer-section links about_section">
+      <h1>Quick Links</h1>
+      <ul>
+        <li><a href="https://www.greatbritishchefs.com/features/bangladeshi-food-guide-cuisine">Bangladeshi food cuisine</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact-form about_section">
+      <h1>Feedback</h1>
+      <div>
+
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+          <input type="email" id="email" name="email" placeholder="Your email.">
+
+          <textarea id="subject" name="subject" placeholder="Write your Feedback.." style="height:100px"></textarea>
+
+          <input type="submit" value="Submit" onclick="feedback()">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; TRAVEL-TO-INVIGORATE.com | Designed by Nusrath Sadia
+  </div>
+</div>
+<!-- //footer -->
+<!-- script -->
+<script type = "text/javascript">
+
+function sayHello() {
+  var hello = document.getElementById("hello");
+             alert("ThankYou for visiting our page.");
+          }
+
+function feedback(){
+          var name = document.getElementById("fname").value;
+          var email = document.getElementById("email").value;
+          var subject = document.getElementById("subject").value;
+          if(name)
+          {
+            if(email)
+              {
+                if(validateemail(email))
+                  alert("Your Name : "+name +"\n Your Email : "+email +"\n Thanks for your feedback! ");
+
+              }
+              else{
+                alert("Please Enter Email");
+              }
+          }
+          else{
+            alert("Please Enter Name");
+          }
+          }
+
+          function validateemail(email)
+          {
+          var x=email;
+          var atposition=x.indexOf("@");
+          var dotposition=x.lastIndexOf(".");
+          if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+          alert("Please enter a valid e-mail address");
+          return false;
+          }
+          else
+            return true;
+          }
+
+</script>
   </body>
 </html>
